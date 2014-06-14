@@ -25,8 +25,8 @@ p,a,small,h1,h2,h3,li {
 }
 
 .navbar-wrapper img {
-	height: 80px;
-	padding: 10px 0;
+	height: 90px;
+	padding: 5px 0;
 }
 
 .navbar-inner {
@@ -35,6 +35,12 @@ p,a,small,h1,h2,h3,li {
 
 .navbar {
 	float: right;
+	padding-top: 30px;
+}
+
+.navbar a {
+	font-size: 1.15em;
+	font-weight: bold;
 }
 
 .footer {

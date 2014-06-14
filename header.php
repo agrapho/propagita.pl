@@ -12,31 +12,22 @@
 
 <body <?php body_class(); ?>>
   <div class="navbar-wrapper row-fluid" id="main-menu">
-    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
     <div class="container">
       <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
       <div class="navbar">
         <div class="navbar-inner">
-          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-          <div class="nav-collapse collapse pull-right">
-            <?php   
-                        $args = array(
-                        'theme_location' => 'primary',
-                        'depth' => 3,
-                        'container' => false,
-                        'menu_class' => 'nav',
-                        'fallback_cb' => false
-                        );
 
-                        wp_nav_menu($args);
-                        ?>
-          </div><!--/.nav-collapse -->
+          <ul class="nav navbar-nav main-menu-nav">
+            <li><a href="<?php echo esc_url(home_url('/')); ?>">Strona główna</a></li>
+            <?php query_posts(array('post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc')); while (have_posts()) { the_post(); ?>
+            <li><a href="<?php echo esc_url(home_url('/')); echo $post->post_name; ?>"><?php the_title(); ?></a></li>
+            <?php } ?>
+          </ul>
         </div><!-- /.navbar-inner -->
       </div><!-- /.navbar -->
     </div> <!-- /.container -->
