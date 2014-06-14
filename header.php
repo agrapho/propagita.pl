@@ -11,7 +11,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <div class="navbar-wrapper row-fluid" id="main-menu">
+  <div class="header navbar-wrapper row-fluid" id="main-menu">
     <div class="container">
       <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
       <div class="navbar">
@@ -31,4 +31,4 @@
         </div><!-- /.navbar-inner -->
       </div><!-- /.navbar -->
     </div> <!-- /.container -->
-  </div><!-- /.navbar-wrapper -->
+  </div><!-- /.header -->

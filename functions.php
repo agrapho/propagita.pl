@@ -86,8 +86,8 @@ function generate_dynamic_thumb($path, $size){
  function enqueue_scripts(){
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap',get_template_directory_uri().'/bootstrap/js/bootstrap.min.js',array('jquery'));
-    wp_enqueue_script('functions',get_template_directory_uri().'/js/jquery.carousel.fullscreen.js',array('jquery'), '0.1', true);
     wp_enqueue_script('functions',get_template_directory_uri().'/js/functions.js',array('jquery'), '0.1', true);
+
     wp_enqueue_style('bootstrap',get_template_directory_uri().'/bootstrap/css/bootstrap.css');
     wp_enqueue_style('main',get_stylesheet_uri());
  }

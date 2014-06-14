@@ -15,7 +15,8 @@ p,a,small,h1,h2,h3,li {
         color: #FFFFFF;
 }
 
-.navbar-wrapper {
+.header {
+	display: none;
 	position: absolute;
 	top: 0px;
 	height: 100px;
@@ -24,7 +25,7 @@ p,a,small,h1,h2,h3,li {
 	opacity: 0.85;
 }
 
-.navbar-wrapper img {
+.header img {
 	height: 90px;
 	padding: 5px 0;
 }
@@ -43,7 +44,52 @@ p,a,small,h1,h2,h3,li {
 	font-weight: bold;
 }
 
+#content {
+	position: relative;
+}
+
+#text-carousel-container {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+}
+
+#text-carousel {
+	position: relative;
+	float: left;
+	top: 0px;
+	width: 40%;
+	height: 100%;
+	z-index: 9998;
+}
+
+#text-carousel .carousel {
+	height: 100%;
+	width: 100%;
+
+	background-image: -webkit-gradient(
+                linear, left top, left bottom, from(rgba(200,200,200,0.8)),
+                to(rgba(40,40,40,0.2))
+        );
+
+        /* FF3.6+ */
+        background-image: -moz-linear-gradient(
+                rgba(200,200,200,0.7) 0%, rgba(40,40,40,0.8) 100%
+        );
+}
+
+#text-carousel .carousel-inner {
+	padding: 120px 10px;
+}
+
+#text-carousel p {
+	padding: 10px;
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
 .footer {
+	display: none;
 	position: absolute;
 	bottom: 0px;
 	width: 100%;     
@@ -51,6 +97,7 @@ p,a,small,h1,h2,h3,li {
 	color: #ffffff;
 	padding-top: 10px;
 	opacity: 0.85;
+	z-index: 9999;
 }
 
 .footer .content {
