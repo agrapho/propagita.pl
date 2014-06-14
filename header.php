@@ -11,15 +11,10 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php get_template_part('customizer'); ?>
-<div class="wide">
-     
-<!-- NAVBAR
-  ================================================== -->
-  <div class="navbar-wrapper">
+  <div class="navbar-wrapper row-fluid" id="main-menu">
     <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-    <div class="container" id="topmenu">
-
+    <div class="container">
+      <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
       <div class="navbar">
         <div class="navbar-inner">
           <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
@@ -28,7 +23,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('sitename'); ?></a>
           <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
           <div class="nav-collapse collapse pull-right">
             <?php   
@@ -40,35 +34,10 @@
                         'fallback_cb' => false
                         );
 
-                         
                         wp_nav_menu($args);
-
-                         
                         ?>
           </div><!--/.nav-collapse -->
         </div><!-- /.navbar-inner -->
       </div><!-- /.navbar -->
-
     </div> <!-- /.container -->
-      
-    <?php if(is_front_page()): ?>
-
-      <div class="container">
-        <div class="row-fluid">
-          <div class="span7">
-            <img class="gray aligncenter" src="<?php echo get_stylesheet_directory_uri()."/images/banner.png"; ?>" />
-          </div>
-
-          <div class="span5">
-            <h2>Sensitive</h2>
-            <p>Sensitive, Fully Responsive WordPress Theme using Bootstrap</p><br>
-            <center>
-              <a href="#" class="btn btn-large btn-info><i class="icon-fire icon-white"></i>Get It Now!</a>
-            </center>
-          </div> <!-- /.span5 -->
-        </div> <!-- /.row-fluid -->
-      </div> <!-- /.container -->
-
-    <?php endif; ?>
-
   </div><!-- /.navbar-wrapper -->

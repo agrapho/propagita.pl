@@ -1,16 +1,53 @@
-.footer {
-	width: 100%;     
-	background: #000000;
-	color: #fff;
+@font-face {
+        font-family: bank_gothic;
+        src: local('bank_gothic_mbt_pl'),
+                url("fonts/bank_gothic_mbt_pl.ttf") format('truetype');
+        font-weight: normal;
 }
 
-.footer a {
-	color: #fff;
+body {
+        background: #000000;
+}
+
+p,a,small,h1,h2,h3,li {
+        font-family: bank_gothic;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+}
+
+.navbar-wrapper {
+	position: absolute;
+	top: 0px;
+	height: 100px;
+	z-index: 9999;
+	background-color: #000000;
+	opacity: 0.85;
+}
+
+.navbar-wrapper img {
+	height: 80px;
+	padding: 10px 0;
+}
+
+.navbar-inner {
+	background-color: #000000;
+}
+
+.navbar {
+	float: right;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;     
+	background: #000000;
+	color: #ffffff;
+	padding-top: 10px;
+	opacity: 0.85;
 }
 
 .footer .content {
 	text-align: center;
-	padding: 10px;
 	font-size: 9pt;
-	margin-top:20px;
 }
