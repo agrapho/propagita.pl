@@ -16,7 +16,6 @@ p,a,small,h1,h2,h3,li {
 }
 
 .header {
-	display: none;
 	position: absolute;
 	top: 0px;
 	height: 100px;
@@ -44,6 +43,37 @@ p,a,small,h1,h2,h3,li {
 	font-weight: bold;
 }
 
+.language-selector,
+.facebook-link {
+	position: fixed;
+	background: #000000;
+	z-index: 9999;
+}
+
+.language-selector {
+	top: 5px;
+	right: -65px;
+}
+
+.language-selector img {
+	padding: 10px;
+	width: 40px;
+	height: 20px;
+}
+
+.facebook-link {
+	top: 50px;
+	right: 0px;
+	width: 59px;
+	text-align: center;
+}
+
+.facebook-link img {
+	width: 30px;
+	height: 30px;
+	padding: 7px;
+}
+
 #content {
 	position: relative;
 }
@@ -65,7 +95,7 @@ p,a,small,h1,h2,h3,li {
 	-moz-background-position: 50% 50%;
 	-o-background-position: 50% 50%;
 	background-position: 50% 50%;
-	z-index: 9999;
+	z-index: 9998;
 	opacity: 1.0;
 	cursor: pointer;
 	text-align: center;
@@ -98,7 +128,6 @@ p,a,small,h1,h2,h3,li {
 }
 
 #text-carousel-container {
-	display: none;
 	position: absolute;
 	top: 0px;
 	height: 100%;
@@ -107,10 +136,15 @@ p,a,small,h1,h2,h3,li {
 #text-carousel {
 	position: relative;
 	float: left;
-	top: 0px;
+	padding-top: 100px;
 	width: 40%;
 	height: 100%;
-	z-index: 9997;
+	z-index: 9996;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 #text-carousel .carousel {
@@ -129,17 +163,27 @@ p,a,small,h1,h2,h3,li {
 }
 
 #text-carousel .carousel-inner {
-	padding: 120px 10px;
 }
 
+#text-carousel a,
 #text-carousel p {
-	padding: 10px;
+	padding: 15px;
+	padding-top: 25px;
 	font-size: 1.2em;
 	line-height: 1.2em;
 }
 
+#text-carousel h1,
+#text-carousel h2,
+#text-carousel h3 {
+	display: inline-block;
+	margin: 0;
+	padding: 15px;
+	padding-top: 25px;
+	padding-bottom: 0px;
+}
+
 .footer {
-	display: none;
 	position: absolute;
 	bottom: 0px;
 	width: 100%;     
@@ -147,7 +191,7 @@ p,a,small,h1,h2,h3,li {
 	color: #ffffff;
 	padding-top: 10px;
 	opacity: 0.85;
-	z-index: 9999;
+	z-index: 9998;
 }
 
 .footer .content {

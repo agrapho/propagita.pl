@@ -1,9 +1,6 @@
-<?php get_header(); ?>    
-     
-            
-<div class="clear"></div>  
-<div class="col2 single">
-     
-</div>
-        
- <?php get_footer(); ?>
+<?php get_header(); ?>
+
+<div id="content" class="row-fluid">
+</div><!-- /#content -->
+
+<?php get_footer(); ?>

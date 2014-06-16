@@ -47,7 +47,9 @@
                 $is_first_item = true;
                 foreach ( $posts as $post ) { ?>
                    <div class="item <?php if ($is_first_item) { echo active; $is_first_item = false; } ?>">
-                     <p><?php echo $post->post_content; ?></p>
+                     <?php $current_language = qtrans_getLanguage();
+                           echo qtrans_use($current_language, $post->post_content);
+                      ?>
                    </div>
                 <?php } ?>
           </div> <!-- /.carousel-inner -->

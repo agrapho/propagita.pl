@@ -90,6 +90,9 @@ function generate_dynamic_thumb($path, $size){
 
     wp_enqueue_style('bootstrap',get_template_directory_uri().'/bootstrap/css/bootstrap.css');
     wp_enqueue_style('main',get_stylesheet_uri());
+    if (is_front_page())  {
+      wp_enqueue_style('main-hidden', get_template_directory_uri()."/hidden.css");
+    }
  }
 
  // wp_title filter
@@ -120,7 +123,6 @@ function generate_dynamic_thumb($path, $size){
     // concoct and return new title
     return get_bloginfo( 'name' ) . $insert . $old_title . $num;
 }
-
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');

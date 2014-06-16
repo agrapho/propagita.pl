@@ -46,4 +46,13 @@
     return false;
   });
 
+  $('.language-selector').hover( 
+    function(){
+      $(this).stop().animate({right: '0px'}, 750)
+    },
+    function(){
+      $(this).stop().animate({right: '-65px'}, 750)
+    }
+  );
+
 }(jQuery);
