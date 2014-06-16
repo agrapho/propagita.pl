@@ -20,7 +20,7 @@ p,a,small,h1,h2,h3,li {
 	position: absolute;
 	top: 0px;
 	height: 100px;
-	z-index: 9999;
+	z-index: 9998;
 	background-color: #000000;
 	opacity: 0.85;
 }
@@ -48,7 +48,57 @@ p,a,small,h1,h2,h3,li {
 	position: relative;
 }
 
+#header-background {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url("/propagita.pl/wp-content/uploads/2014/06/budynek_strona_startowa_1.jpg");
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-background-position: 50% 50%;
+	-moz-background-position: 50% 50%;
+	-o-background-position: 50% 50%;
+	background-position: 50% 50%;
+	z-index: 9999;
+	opacity: 1.0;
+	cursor: pointer;
+	text-align: center;
+}
+
+#header-background .centerer {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+#header-background .centered {
+	display: inline-block;
+	vertical-align: middle;
+	width: 60%;
+}
+
+#header-background img {
+	margin-bottom: 3em;
+}
+
+.carousel-control {
+	top: 50%;
+	background: transparent;
+	border: 0;
+	font-weight: bold;
+}
+
+#image-carousel {
+}
+
 #text-carousel-container {
+	display: none;
 	position: absolute;
 	top: 0px;
 	height: 100%;
@@ -60,7 +110,7 @@ p,a,small,h1,h2,h3,li {
 	top: 0px;
 	width: 40%;
 	height: 100%;
-	z-index: 9998;
+	z-index: 9997;
 }
 
 #text-carousel .carousel {

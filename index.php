@@ -1,7 +1,14 @@
 <?php get_header(); ?>
 
 <div id="content" class="row-fluid">
-  
+  <div id="header-background">
+    <span class="centerer"></span>
+    <div class="centered">
+      <img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img>
+      <h2><?php echo bloginfo('description'); ?></h2>
+    </div>
+  </div>
+
   <div id="image-carousel" class="carousel slide">
     <div class="carousel-inner">
     <?php $temp_query = $wp_query;
@@ -21,10 +28,10 @@
 
     <!-- Controls -->
     <a class="left carousel-control" href="#image-carousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
+      &lsaquo;
     </a>
     <a class="right carousel-control" href="#image-carousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
+      &rsaquo;
     </a>
   </div><!-- /#image-carousel -->
 
