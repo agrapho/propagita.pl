@@ -9,6 +9,7 @@ function theme_setup(){
     ) );
 
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'custom-background' );
  }
 
 //generate thumbnail 

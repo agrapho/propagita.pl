@@ -43,9 +43,12 @@
                     elseif ($current_language == 'en')
                       echo "Main"; ?>
             </a></li>
-            <?php query_posts(array('post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc')); while (have_posts()) { the_post(); ?>
-            <li><a href="<?php echo esc_url(home_url('/')); echo $post->post_name; ?>"><?php the_title(); ?></a></li>
-            <?php } ?>
+            <?php $temp_query = $wp_query;
+                  query_posts(array('post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc'));
+                  while (have_posts()) { the_post(); ?>
+                    <li><a href="<?php echo esc_url(home_url('/')); echo $post->post_name; ?>"><?php the_title(); ?></a></li>
+            <?php }
+                  $wp_query = $temp_query; ?>
           </ul>
         </div><!-- /.navbar-inner -->
       </div><!-- /.navbar -->

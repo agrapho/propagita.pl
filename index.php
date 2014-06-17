@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
-<div id="content" class="row-fluid">
+<div class="row-fluid">
   <div id="header-background">
+    <style>
+      #header-background {
+        background-image: url(<?php echo get_background_image(); ?>);
+      }
+    </style>
     <span class="centerer"></span>
     <div class="centered">
       <img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img>
@@ -57,6 +62,6 @@
       </div><!-- /#text-carousel -->
     </div><!-- /#text-carousel-container -->
   </div><!-- /.container -->
-</div><!-- /#content -->
+</div>
  
 <?php get_footer(); ?>

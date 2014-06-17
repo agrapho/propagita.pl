@@ -9,10 +9,20 @@ body {
         background: #000000;
 }
 
-p,a,small,h1,h2,h3,li {
+p,a,small,h1,h2,h3,h4,li {
         font-family: bank_gothic;
         letter-spacing: 1px;
         color: #FFFFFF;
+}
+
+h4 {
+	font-size: 1.4em;
+	margin-top: 20px;
+}
+
+.post, .page {
+	background-image: none!important;
+	background-color: #000000;
 }
 
 .header {
@@ -76,13 +86,14 @@ p,a,small,h1,h2,h3,li {
 
 #content {
 	position: relative;
+	padding-top: 120px;
+	padding-bottom: 30px;
 }
 
 #header-background {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-image: url("/propagita.pl/wp-content/uploads/2014/06/budynek_strona_startowa_1.jpg");
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
 	-o-background-size: 100%;
@@ -183,8 +194,22 @@ p,a,small,h1,h2,h3,li {
 	padding-bottom: 0px;
 }
 
+.contact-form-input-area {
+	float: left;
+	width: 40%;
+}
+
+.contact-form-info {
+	float: right;
+}
+
+input, textarea {
+        font-family: bank_gothic;
+	width: 100%;
+}
+
 .footer {
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
 	width: 100%;     
 	background: #000000;
