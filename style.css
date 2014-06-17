@@ -5,6 +5,12 @@
         font-weight: normal;
 }
 
+@media (min-width: 1400px) {
+    .container{
+        width: 1200px;
+    }
+}
+
 body {
         background: #000000;
 }
@@ -86,7 +92,7 @@ h4 {
 
 #content {
 	position: relative;
-	padding-top: 120px;
+	padding-top: 130px;
 	padding-bottom: 100px;
 }
 
