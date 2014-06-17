@@ -136,6 +136,7 @@ h4 {
 }
 
 #image-carousel {
+	display: none;
 }
 
 #text-carousel-container {

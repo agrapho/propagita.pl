@@ -25,7 +25,8 @@
     $("#text-carousel .carousel").carousel(nextSlide);
   });
 
-  $(document).ready(function() {
+  $(window).load(function() {
+    $('#image-carousel').show();
     $('#image-carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
     $('#image-carousel .item').css({'position': 'fixed', 'width': '100%', 'height': '100%'});
     $('#image-carousel .carousel-inner div.item img').each(function() {
