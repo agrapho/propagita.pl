@@ -208,6 +208,10 @@ input, textarea {
 	width: 100%;
 }
 
+#cboxOverlay {
+	background: #000000!important;
+}
+
 .footer {
 	position: fixed;
 	bottom: 0px;
