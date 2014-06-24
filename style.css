@@ -180,7 +180,19 @@ h4 {
         );
 }
 
-#text-carousel .carousel-inner {
+#image-carousel .carousel-inner > .item {
+	-webkit-transition: 2.5s linear left;
+	-moz-transition: 2.5s linear left;
+	-o-transition: 2.5s linear left;
+	transition: 2.5s linear left;
+}
+
+#text-carousel .carousel-inner > .item {
+	padding-bottom: 15px;
+	-webkit-transition: 2.5s ease-in-out left;
+	-moz-transition: 2.5s ease-in-out left;
+	-o-transition: 2.5s ease-in-out left;
+	transition: 2.5s ease-in-out left;
 }
 
 #text-carousel a,
@@ -201,6 +213,24 @@ h4 {
 	padding-bottom: 0px;
 }
 
+#text-carousel a {
+	position: relative;
+	color: #BBBBBB;
+	background-color: rgba(10,10,10,0.3);
+	border: solid 2px #999999;	
+	padding: 10px;
+	margin: 15px;
+	text-shadow: 0 1px 0 #080808;
+}
+
+#text-carousel a:hover {
+	left: 2px;
+	top: 1px;
+	color: #FFFFFF;
+	border: solid 1px #999999;
+	text-decoration: none;
+}
+
 .contact-form-input-area {
 	float: left;
 	width: 40%;
@@ -217,6 +247,24 @@ input, textarea {
 
 #cboxOverlay {
 	background: #000000!important;
+}
+
+.cboxElement img {
+        -webkit-filter: grayscale(70%);
+        -moz-filter: grayscale(70%);
+        -ms-filter: grayscale(70%);
+        -o-filter: grayscale(70%);
+        filter: grayscale(70%);
+        filter: gray; /* IE 6-9 */;
+}
+
+.cboxElement img:hover {
+        -webkit-filter: initial;
+        -moz-filter: initial;
+        -ms-filter: initial;
+        -o-filter: initial;
+        filter: initial;
+        filter: initial; /* IE 6-9 */;
 }
 
 .footer {

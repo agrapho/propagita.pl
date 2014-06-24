@@ -97,14 +97,9 @@ function generate_dynamic_thumb($path, $size){
  }
 
  // wp_title filter
- function page_title( $old_title, $sep, $sep_location ){
+ function page_title( $old_title){
+    $sep = '»';
     $ssep = ' ' . $sep . ' ';
-    // find the type of index page this is
-    if( is_category() ) $insert = $ssep . 'Category';
-    elseif( is_tag() ) $insert = $ssep . 'Tag';
-    elseif( is_author() ) $insert = $ssep . 'Author';
-    elseif( is_year() || is_month() || is_day() ) $insert = $ssep . 'Archives';
-    else $insert = NULL;
 
     // get the page number we're on (index)
     if( get_query_var( 'paged' ) )
@@ -122,7 +117,7 @@ function generate_dynamic_thumb($path, $size){
     $old_title .=  $ssep  . $site_description;
 
     // concoct and return new title
-    return get_bloginfo( 'name' ) . $insert . $old_title . $num;
+    return get_bloginfo( 'name' ) . $old_title . $num;
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');

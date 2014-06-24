@@ -10,11 +10,12 @@
 
       $('#image-carousel').carousel({
           pause: "false",
-          interval: 4000
+          interval: 20000
       });
 
       $('#text-carousel .carousel').carousel({
-          pause: "true"
+          pause: "true",
+          interval: 20000
       });
 
     });
