@@ -13,12 +13,21 @@
 <body <?php body_class(); ?>>
   <div class="language-selector">
     <?php $current_language = qtrans_getLanguage();
-          if ($current_language == "pl")
-            $languages = array("pl", "en");
-          elseif ($current_language == "en")
-            $languages = array("en", "pl"); ?>
-    <a href="<?php echo esc_url(home_url("/" . $languages[0])); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/flags/" . $languages[0] . ".png"; ?>" alt=""></img></a>
-    <a href="<?php echo esc_url(home_url("/" . $languages[1])); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/flags/" . $languages[1] . ".png"; ?>" alt=""></img></a>
+          if ($current_language == 'pl') {
+            $languages = array('', '/en');
+            $flags = array('pl', 'en');
+          }
+          elseif ($current_language == 'en') {
+            $languages = array('/en', '');
+            $flags = array('en', 'pl');
+          }
+          if ($pagename == '')
+            $current_page_name = '';
+          else
+            $current_page_name = $pagename . '/';
+          ?>
+    <a href="<?php echo esc_url(home_url($languages[0] . '/' . $current_page_name)); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/flags/" . $flags[0] . ".png"; ?>" alt=""></img></a>
+    <a href="<?php echo esc_url(home_url($languages[1] . '/' . $current_page_name)); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/flags/" . $flags[1] . ".png"; ?>" alt=""></img></a>
   </div><!-- /.language-selector -->
 
   <div class="facebook-link">
@@ -37,7 +46,7 @@
           </a>
 
           <ul class="nav navbar-nav main-menu-nav">
-            <li><a href="<?php echo esc_url(home_url('/')); ?>">
+            <li><a href="<?php echo esc_url(home_url('/')); echo current_language(); ?>">
               <?php if ($current_language == 'pl')
                       echo "Strona główna";
                     elseif ($current_language == 'en')
@@ -46,7 +55,7 @@
             <?php $temp_query = $wp_query;
                   query_posts(array('post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc'));
                   while (have_posts()) { the_post(); ?>
-                    <li><a href="<?php echo esc_url(home_url('/')); echo $post->post_name; ?>"><?php the_title(); ?></a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); echo current_language(); echo $post->post_name . '/'; ?>"><?php the_title(); ?></a></li>
             <?php }
                   $wp_query = $temp_query; ?>
           </ul>

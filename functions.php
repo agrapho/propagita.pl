@@ -118,7 +118,15 @@ function generate_dynamic_thumb($path, $size){
 
     // concoct and return new title
     return get_bloginfo( 'name' ) . $old_title . $num;
-}
+ }
+
+ function current_language() {
+    $lang = qtrans_getLanguage();
+    if ($lang == 'pl')
+      return '';
+    else
+      return $lang . '/';
+ }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');

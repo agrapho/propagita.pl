@@ -249,6 +249,10 @@ input, textarea {
 	background: #000000!important;
 }
 
+.gallery img {
+	border: none!important;
+}
+
 .cboxElement img {
         -webkit-filter: grayscale(70%);
         -moz-filter: grayscale(70%);
@@ -256,6 +260,7 @@ input, textarea {
         -o-filter: grayscale(70%);
         filter: grayscale(70%);
         filter: gray; /* IE 6-9 */;
+	opacity: 0.5;
 }
 
 .cboxElement img:hover {
@@ -265,6 +270,7 @@ input, textarea {
         -o-filter: initial;
         filter: initial;
         filter: initial; /* IE 6-9 */;
+	opacity: 1.0;
 }
 
 .footer {
