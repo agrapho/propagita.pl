@@ -9,7 +9,7 @@
     </style>
     <span class="centerer"></span>
     <div class="centered">
-      <img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img>
+      <img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_black.png"; ?>" alt=""></img>
       <h2><?php echo bloginfo('description'); ?></h2>
     </div>
   </div>

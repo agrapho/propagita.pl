@@ -40,23 +40,47 @@ h4 {
 	opacity: 0.85;
 }
 
-.header img {
+#home_link img {
 	height: 90px;
 	padding: 5px 0;
 }
 
-.navbar-inner {
+#main-menu .navbar-inner {
 	background-color: #000000;
 }
 
-.navbar {
+#main-menu .navbar {
 	float: right;
 	padding-top: 30px;
 }
 
-.navbar a {
+#main-menu .navbar a {
 	font-size: 1.15em;
 	font-weight: bold;
+}
+
+#main-menu .navbar .nav > li:first-child {
+    border-left: solid 1px gray;
+}
+
+#main-menu .navbar .nav > li {
+    border-right: solid 1px gray;
+}
+
+#main-menu .link-image-container {
+    position: relative;
+    top: 15px;
+    width: 100%;
+    height: 0px;
+}
+
+#main-menu .link-image-container img {
+    position: relative;
+    top: 8px;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    margin-left: -18px;
 }
 
 .language-selector,
@@ -132,6 +156,10 @@ h4 {
 
 #header-background img {
 	margin-bottom: 3em;
+}
+
+#header-background h2 {
+    color: black;
 }
 
 .carousel-control {

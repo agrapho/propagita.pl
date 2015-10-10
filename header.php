@@ -36,7 +36,7 @@
 
   <div class="header navbar-wrapper row-fluid" id="main-menu">
     <div class="container">
-      <a href="<?php echo esc_url(home_url('/')); echo current_language(); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
+      <a href="<?php echo esc_url(home_url('/')); echo current_language(); ?>" id="home_link"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
       <div class="navbar">
         <div class="navbar-inner">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -46,17 +46,18 @@
           </a>
 
           <ul class="nav navbar-nav main-menu-nav">
-            <li><a href="<?php echo esc_url(home_url('/')); echo current_language(); ?>">
-              <?php if ($current_language == 'pl')
-                      echo "Strona główna";
-                    elseif ($current_language == 'en')
-                      echo "Main"; ?>
-            </a></li>
             <?php $temp_query = $wp_query;
                   query_posts(array('post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc'));
                   while (have_posts()) { the_post(); ?>
-                    <li><a href="<?php echo esc_url(home_url('/')); echo current_language(); echo $post->post_name . '/'; ?>"><?php the_title(); ?></a></li>
-            <?php }
+                    <li>
+                        <a href="<?php echo esc_url(home_url('/')); echo current_language(); echo $post->post_name . '/'; ?>"><?php the_title(); ?></a>
+                        <div class="link-image-container">
+                            <a href="<?php echo esc_url(home_url('/')); echo current_language(); echo $post->post_name . '/'; ?>">
+                                <?php the_post_thumbnail('thumbnail'); ?>
+                            </a>
+                        </div>
+                    </li>
+                  <?php }
                   $wp_query = $temp_query; ?>
           </ul>
         </div><!-- /.navbar-inner -->
