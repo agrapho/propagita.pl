@@ -36,7 +36,7 @@
 
   <div class="header navbar-wrapper row-fluid" id="main-menu">
     <div class="container">
-      <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
+      <a href="<?php echo esc_url(home_url('/')); echo current_language(); ?>"><img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_white.png"; ?>" alt=""></img></a>
       <div class="navbar">
         <div class="navbar-inner">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">

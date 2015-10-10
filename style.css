@@ -155,6 +155,7 @@ h4 {
 	position: relative;
 	float: left;
 	padding-top: 100px;
+	padding-bottom: 100px;
 	width: 40%;
 	height: 100%;
 	z-index: 9996;
@@ -260,7 +261,7 @@ input, textarea {
         -o-filter: grayscale(70%);
         filter: grayscale(70%);
         filter: gray; /* IE 6-9 */;
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 .cboxElement img:hover {
