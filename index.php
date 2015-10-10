@@ -1,12 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row-fluid">
-  <div id="header-background">
-    <style>
-      #header-background {
-        background-image: url(<?php echo get_background_image(); ?>);
-      }
-    </style>
+  <div id="header-background" class="background background-cover">
     <span class="centerer"></span>
     <div class="centered">
       <img src="<?php echo get_stylesheet_directory_uri()."/images/propagita_logo_black.png"; ?>" alt=""></img>
@@ -16,8 +11,7 @@
 
   <div id="image-carousel" class="carousel slide">
     <div class="carousel-inner">
-    <?php $temp_query = $wp_query;
-          $args = array( 'post_type' => 'post',
+    <?php $args = array( 'post_type' => 'post',
                          'posts_per_page' => -1,
                          'order' => 'ASC' );
           $posts = get_posts( $args );
@@ -27,8 +21,7 @@
              <div class="item <?php if ($is_first_item) { echo active; $is_first_item = false; } ?>">
                <img src="<?php echo $attachments[0]; ?>" alt=""></img>
              </div>
-          <?php }
-          $wp_query = $temp_query; ?>
+          <?php } wp_reset_query(); ?>
     </div> <!-- /.carousel-inner -->
 
     <!-- Controls -->
@@ -56,7 +49,7 @@
                            echo qtrans_use($current_language, $post->post_content);
                       ?>
                    </div>
-                <?php } ?>
+                <?php } wp_reset_query(); ?>
           </div> <!-- /.carousel-inner -->
         </div> <!-- /.carousel -->
       </div><!-- /#text-carousel -->

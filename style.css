@@ -120,10 +120,7 @@ h4 {
 	padding-bottom: 100px;
 }
 
-#header-background {
-	position: absolute;
-	height: 100%;
-	width: 100%;
+.background-cover {
 	-webkit-background-size: 100%;
 	-moz-background-size: 100%;
 	-o-background-size: 100%;
@@ -136,6 +133,16 @@ h4 {
 	-moz-background-position: 50% 50%;
 	-o-background-position: 50% 50%;
 	background-position: 50% 50%;
+}
+
+.background {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+    background-image: url("images/background.jpg");
+}
+
+#header-background {
 	z-index: 9998;
 	opacity: 1.0;
 	cursor: pointer;
@@ -192,7 +199,7 @@ h4 {
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
-        box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #text-carousel .carousel {
@@ -259,6 +266,64 @@ h4 {
 	color: #FFFFFF;
 	border: solid 1px #999999;
 	text-decoration: none;
+}
+
+.vertical-text {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+    /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.offer {
+    height: 100%;
+}
+
+.offer .offer-category-outer {
+    padding-top: 180px;
+    height: 100%;
+}
+
+.offer .offer-category {
+    position: relative;
+    border: solid 1px gray;
+    height: 90%;
+    text-align: bottom;
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE 6-9 */;
+}
+
+.offer .offer-category:hover {
+    -webkit-filter: initial;
+    -moz-filter: initial;
+    -ms-filter: initial;
+    -o-filter: initial;
+    filter: initial;
+    filter: initial; /* IE 6-9 */;
+    cursor: pointer;
+}
+
+.offer .offer-category .vertical-text {
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+}
+
+.offer .vertical-text h2 {
+    font-size: 2.5em;
 }
 
 .contact-form-input-area {
