@@ -11,15 +11,16 @@
 
   <div id="image-carousel" class="carousel slide">
     <div class="carousel-inner">
-    <?php $args = array( 'post_type' => 'post',
+    <?php $offer_page = get_page_by_path('oferta');
+          $args = array( 'post_type' => 'page',
                          'posts_per_page' => -1,
+                         'post_parent' => $offer_page->ID,
                          'order' => 'ASC' );
-          $posts = get_posts( $args );
+          $offers = get_posts( $args );
           $is_first_item = true;
-          foreach ( $posts as $post ) {
-             $attachments = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); ?>
+          foreach ( $offers as $offer ) { ?>
              <div class="item <?php if ($is_first_item) { echo active; $is_first_item = false; } ?>">
-               <img src="<?php echo $attachments[0]; ?>" alt=""></img>
+               <img src="<?php echo get_stylesheet_directory_uri()?>/images/bg_<?php echo $offer->post_name; ?>.jpg" alt=""></img>
              </div>
           <?php } wp_reset_query(); ?>
     </div> <!-- /.carousel-inner -->
@@ -38,16 +39,19 @@
       <div id="text-carousel" class="container">
         <div class="carousel slide">
           <div class="carousel-inner">
-          <?php $args = array( 'post_type' => 'post',
+          <?php $args = array( 'post_type' => 'page',
                                'posts_per_page' => -1,
+                               'post_parent' => $offer_page->ID,
                                'order' => 'ASC' );
-                $posts = get_posts( $args );
+                $offers = get_posts( $args );
                 $is_first_item = true;
-                foreach ( $posts as $post ) { ?>
+                foreach ( $offers as $offer ) { ?>
                    <div class="item <?php if ($is_first_item) { echo active; $is_first_item = false; } ?>">
+                     <p>
                      <?php $current_language = qtrans_getLanguage();
-                           echo qtrans_use($current_language, $post->post_content);
+                           echo qtrans_use($current_language, $offer->post_content);
                       ?>
+                     </p>
                    </div>
                 <?php } wp_reset_query(); ?>
           </div> <!-- /.carousel-inner -->
