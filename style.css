@@ -318,12 +318,14 @@ h4 {
 
 .offer .offer-category .vertical-text {
     position: absolute;
-    bottom: 15px;
-    left: 50px;
+    bottom: 25px;
+    left: 60px;
 }
 
 .offer .vertical-text h2 {
-    font-size: 2.5em;
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa;     #, 1px 0 #aaaaaa, 0 -1px #aaaaaa;
 }
 
 .contact-form-input-area {
