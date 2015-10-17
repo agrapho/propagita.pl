@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="content" class="container">
+<div id="content" class="container background background-cover">
   <?php $temp_query = $wp_query;
         while ( have_posts() ) { the_post();
             echo the_content(); 
