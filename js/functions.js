@@ -41,10 +41,16 @@
         $('#image-carousel').css({'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
   });
 
-  $(".anchor-link").click(function() {
-    $('html, body').animate({
-        scrollTop: $( $(this).find("a").attr('href') ).offset().top - 40
-    }, 500);
+  $(".offer-category").click(function() {
+    if ($(this).hasClass("active-offer")) {
+      // remove 'active-offer' class from all links
+      $(".offer-category").removeClass("active-offer");
+    } else {
+      // remove 'active-offer' class from all links
+      $(".offer-category").removeClass("active-offer");
+      // add 'active-offer' class to clicked link and scroll
+      $(this).addClass("active-offer");
+    }
     return false;
   });
 

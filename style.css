@@ -319,7 +319,7 @@ h4 {
     filter: gray; /* IE 6-9 */;
 }
 
-.offer .offer-category:hover {
+.offer .offer-category:hover, .offer .active-offer {
     -webkit-filter: initial;
     -moz-filter: initial;
     -ms-filter: initial;
