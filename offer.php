@@ -7,9 +7,7 @@ Template Name: Oferta
 <?php get_header(); ?>
 
 <div class="row-fluid background background-cover">
-  <div class="row offer">
-    <div class="span2">
-    </div>
+  <div class="container offer">
     <!-- offer should have 4 subpages -->
     <?php $args = array( 'post_type' => 'page',
                          'posts_per_page' => -1,
@@ -24,7 +22,7 @@ Template Name: Oferta
                     background-image: url(<?php echo $attachments[0]; ?>);
                 }
              </style>
-             <div class="span2 offer-category-outer">
+             <div class="offer-box">
                <div class="offer-category offer-category-<?php echo $i; ?> background-cover">
                  <div class="vertical-text"><h2><?php echo the_title(); ?></h2></div>
                </div> <!-- /.offer-category -->
@@ -43,7 +41,7 @@ Template Name: Oferta
 #             $j = 0;
 #             foreach ( $offer_details as $offer_detail ) {
 #                if (($j % 2) == 0) {
-#                    echo '<div class="span2 offer-detail-outer">';
+#                    echo '<div class="offer-box">';
                 } ?>
 <!--                    <div class="offer-detail">
                         <p><?php echo $offer_detail->post_title; ?></p>
@@ -60,8 +58,6 @@ Template Name: Oferta
 #             break; -->
 #          }
         wp_reset_query(); ?>
-    <div class="span2">
-    </div>
   </div><!-- /.offer -->
 </div><!-- /.row-fluid -->
 
