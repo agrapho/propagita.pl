@@ -326,7 +326,6 @@ h4 {
     -o-filter: initial;
     filter: initial;
     filter: initial; /* IE 6-9 */;
-    cursor: pointer;
 }
 
 .offer .offer-category .vertical-text {
@@ -341,8 +340,24 @@ h4 {
     text-shadow: -1px 0 #aaaaaa, 0 1px #aaaaaa;     #, 1px 0 #aaaaaa, 0 -1px #aaaaaa;
 }
 
+.offer .offer-detail-box {
+    position: relative;
+    height: 90%;
+}
+
 .offer .offer-detail {
-    height: 50%;
+    position: absolute;
+    height: 49%;
+    width: 100%;
+    border: solid 1px gray;
+}
+
+.offer .offer-detail-top {
+    margin-bottom: 5px;
+}
+
+.offer .offer-detail-bottom {
+    bottom: 0px;
 }
 
 .contact-form-input-area {
