@@ -41,13 +41,13 @@ Template Name: Oferta szczegółowa
 
              if (($i % 2) == 0) { ?>
                <div class="offer-box">
-                 <div class="offer-detail-box">
+                 <div class="offer-detail-box offer-details-style-<?php echo $offer_index; ?>">
                    <div class="offer-detail offer-detail-top">
-                     <p><?php echo $post->post_title; ?></p>
+                     <?php get_template_part( 'offer-detail', get_post_format($post->ID) ); ?>
                    </div>
        <?php } elseif (($i % 2) == 1) { ?>
                    <div class="offer-detail offer-detail-bottom">
-                     <p><?php echo $post->post_title; ?></p>
+                     <?php get_template_part( 'offer-detail', get_post_format($post->ID) ); ?>
                    </div>
                  </div> <!-- /.offer-detail-box -->
                </div> <!-- /.offer-box -->

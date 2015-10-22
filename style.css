@@ -25,11 +25,6 @@ p,a,small,h1,h2,h3,h4,li {
     color: #444444;
 }
 
-h4 {
-	font-size: 1.4em;
-	margin-top: 20px;
-}
-
 .post, .page {
 	background-image: none!important;
 	background-color: #000000;
@@ -358,6 +353,40 @@ h4 {
 
 .offer .offer-detail-bottom {
     bottom: 0px;
+}
+
+.offer .offer-detail .offer-detail-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.offer .offer-detail .offer-detail-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.offer .offer-detail h4 {
+	font-size: 1.4em;
+	margin-top: 10px;
+    margin-left: 5px;
+}
+
+.offer .offer-details-style-0 .offer-detail-text {
+    opacity: 0;
+}
+
+.offer .offer-details-style-0 .offer-detail-text:hover {
+    opacity: 1;
+}
+
+.offer .offer-details-style-1 .offer-detail-text ul {
+    opacity: 0;
+}
+
+.offer .offer-details-style-1 .offer-detail-text ul:hover {
+    opacity: 1;
 }
 
 .contact-form-input-area {

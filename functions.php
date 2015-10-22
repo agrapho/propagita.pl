@@ -84,7 +84,7 @@ function generate_dynamic_thumb($path, $size){
     return $thumbpath;
 }
  
- function enqueue_scripts(){
+function enqueue_scripts(){
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap',get_template_directory_uri().'/bootstrap/js/bootstrap.min.js',array('jquery'));
     wp_enqueue_script('functions',get_template_directory_uri().'/js/functions.js',array('jquery'), '0.1', true);
@@ -94,10 +94,10 @@ function generate_dynamic_thumb($path, $size){
     if (is_front_page())  {
       wp_enqueue_style('main-hidden', get_template_directory_uri()."/hidden.css");
     }
- }
+}
 
- // wp_title filter
- function page_title( $old_title){
+// wp_title filter
+function page_title( $old_title){
     $sep = '»';
     $ssep = ' ' . $sep . ' ';
 
@@ -118,15 +118,21 @@ function generate_dynamic_thumb($path, $size){
 
     // concoct and return new title
     return get_bloginfo( 'name' ) . $old_title . $num;
- }
+}
 
- function current_language() {
+function current_language() {
     $lang = qtrans_getLanguage();
     if ($lang == 'pl')
       return '';
     else
       return $lang . '/';
- }
+}
+
+function transform_offer_detail_name(&$name) {
+	$name_large_case = substr($name, 0, 1);
+    $name_normal_case = substr($name, 2);
+    $name = "<large>$name_large_case</large>$name_normal_case";
+}
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');
