@@ -128,10 +128,10 @@ function current_language() {
       return $lang . '/';
 }
 
-function transform_offer_detail_name(&$name) {
+function display_offer_detail_name($name) {
 	$name_large_case = substr($name, 0, 1);
-    $name_normal_case = substr($name, 2);
-    $name = "<large>$name_large_case</large>$name_normal_case";
+    $name_normal_case = substr($name, 1);
+    echo "<large>$name_large_case</large>$name_normal_case";
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');

@@ -373,6 +373,10 @@ p,a,small,h1,h2,h3,h4,li {
     margin-left: 5px;
 }
 
+.offer .offer-detail h4 large {
+    font-size: 2.4em;
+}
+
 .offer .offer-details-style-0 .offer-detail-text {
     opacity: 0;
 }
