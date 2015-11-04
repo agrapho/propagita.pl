@@ -24,7 +24,7 @@ Template Name: Oferta
              </style>
              <div class="offer-box">
                <a href="<?php echo get_permalink(); ?>">
-                 <div class="offer-category offer-category-<?php echo $i; ?> background-cover">
+                 <div class="offer-category offer-category-<?php echo $i; ?> background-cover grayscale">
                    <div class="vertical-text"><h2><?php echo the_title(); ?></h2></div>
                  </div> <!-- /.offer-category -->
                </a>

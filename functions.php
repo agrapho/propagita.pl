@@ -134,6 +134,14 @@ function display_offer_detail_name($name) {
     echo "<large>$name_large_case</large>$name_normal_case";
 }
 
+function display_gallery_item($rel_url) {
+    $abs_url = "http://127.0.0.1/propagita.pl/".$rel_url;
+    echo "<a href=\"".$abs_url."\" rel=\"gallery\">";
+    echo "<div class=\"lt-body background-cover grayscale\" style=\"background-image: url(".$abs_url.")\">";
+    echo "</div>";
+    echo "</a>";
+}
+
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts');
 add_filter( 'wp_title', 'page_title');
 add_action( 'after_setup_theme', 'theme_setup' );

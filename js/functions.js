@@ -41,6 +41,11 @@
         $('#image-carousel').css({'width': $(window).outerWidth(), 'height': $(window).outerHeight()});
   });
 
+  $(document).ready(function () {
+        $(".gallery a").attr("rel","gallery");   
+        $('a[rel="gallery"]').colorbox({title: function(){ return $(this).children().attr("alt"); }});
+  });
+
   $('.language-selector').hover( 
     function(){
       $(this).stop().animate({right: '0px'}, 750)
