@@ -82,6 +82,14 @@ p,a,small,h1,h2,h3,h4,li {
     margin-left: -18px;
 }
 
+#main-menu .navbar-inner {
+    padding-right: 0px;
+}
+
+#main-menu .main-menu-nav {
+    margin: 0px!important;
+}
+
 .language-selector,
 .facebook-link {
 	position: fixed;
@@ -393,21 +401,30 @@ p,a,small,h1,h2,h3,h4,li {
     opacity: 1;
 }
 
-.contact-form-input-area {
+.contact-form .contact-form-input-area {
 	float: left;
 	width: 40%;
 }
 
-.contact-form-info {
+.contact-form .contact-form-info {
 	float: right;
 }
 
-input, textarea {
+.contact-form input,
+.contact-form textarea {
     font-family: bank_gothic;
 	width: 100%;
 }
 
-#cboxOverlay {
+.gallery {
+    padding-top: 180px;
+}
+
+.gallery .lt {
+    border: solid 1px gray;
+}
+
+.gallery #cboxOverlay {
 	background: #000000!important;
 }
 
@@ -415,7 +432,7 @@ input, textarea {
 	border: none!important;
 }
 
-.cboxElement img {
+.gallery .cboxElement img {
         -webkit-filter: grayscale(70%);
         -moz-filter: grayscale(70%);
         -ms-filter: grayscale(70%);
@@ -425,7 +442,7 @@ input, textarea {
 	opacity: 0.6;
 }
 
-.cboxElement img:hover {
+.gallery .cboxElement img:hover {
         -webkit-filter: initial;
         -moz-filter: initial;
         -ms-filter: initial;
