@@ -135,7 +135,7 @@ function display_offer_detail_name($name) {
 }
 
 function display_gallery_item($rel_url) {
-    $abs_url = "http://127.0.0.1/propagita.pl/".$rel_url;
+    $abs_url = get_home_url()."/".$rel_url;
     echo "<a href=\"".$abs_url."\" rel=\"gallery\">";
     echo "<div class=\"lt-body background-cover grayscale\" style=\"background-image: url(".$abs_url.")\">";
     echo "</div>";
