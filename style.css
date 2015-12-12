@@ -13,6 +13,7 @@
 
 body {
     background: #000000;
+    height: 100%;
 }
 
 p,a,small,h1,h2,h3,h4,li {
@@ -123,11 +124,6 @@ p,a,small,h1,h2,h3,h4,li {
 
 #content {
 	position: relative;
-	padding-top: 130px;
-	padding-bottom: 100px;
-}
-
-.page #content {
     padding-top: 160px;
 }
 
@@ -150,7 +146,7 @@ p,a,small,h1,h2,h3,h4,li {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-    background-image: url("images/bg.jpg");
+    background: url("images/bg.jpg") no-repeat center center fixed;
 }
 
 #header-background {
@@ -222,10 +218,10 @@ p,a,small,h1,h2,h3,h4,li {
                 to(rgba(20,20,20,0.6))
         );
 
-        /* FF3.6+ */
-        background-image: -moz-linear-gradient(
+    /* FF3.6+ */
+    background-image: -moz-linear-gradient(
                 rgba(200,200,200,0.7) 0%, rgba(40,40,40,0.8) 100%
-        );
+    );
 }
 
 #image-carousel .carousel-inner > .item {
